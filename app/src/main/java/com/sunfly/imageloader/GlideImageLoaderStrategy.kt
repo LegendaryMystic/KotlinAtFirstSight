@@ -7,6 +7,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.sunfly.imageloader.transformation.BlurTransformation
 import com.sunfly.utils.Preconditions
 import io.reactivex.Completable
 import io.reactivex.Scheduler
@@ -58,9 +59,9 @@ class GlideImageLoaderStrategy: ImageLoaderStrategy<ImageLoaderOptionsImpl> {
             glideRequest.transform(RoundedCorners(options.imageRadius))
         }
 
-//        if (options.isImageBlur()) {
-//            glideRequest.transform()
-//        }
+        if (options.isImageBlur()) {
+            glideRequest.transform(BlurTransformation(ctx,options.blurValue))
+        }
 
         if (options.placeholder != 0) {
             glideRequest.placeholder(options.placeholder)
