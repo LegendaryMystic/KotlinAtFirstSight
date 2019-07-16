@@ -12,10 +12,10 @@ import android.widget.RelativeLayout;
 /**
  *  Incremental change is better than ambitious failure
  *
- *  @author : <a href="http://mysticcoder.coding.me">dingliang</a>
+ *  @author : <a href="http://mysticcoder.coding.me">MysticCoder</a>
  *  @date : 2019/7/11
  *  @desc :
- *  Copyright (c) 2019 SunFly Holdings Co., Ltd  All rights reserved.
+ *  Copyright (c) 2019 *********  All rights reserved.
  */
 public abstract class AbstractDragFloatActionButton extends RelativeLayout {
     private int parentHeight;//悬浮的父布局高度
